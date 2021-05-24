@@ -50,6 +50,6 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-renderCoffees(coffees);
+renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
