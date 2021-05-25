@@ -34,16 +34,18 @@ function updateCoffees(e) {
 
 function addCoffee(e) {
     e.preventDefault();
+
     let newCoffeeRoast = roastSelection.value;
     let newCoffeeName = e.target.value;
     // let emptyNewCoffee = {};
     // newCoffee.setAttribute('roast')
     // coffees.push(newCoffee);
-    var newCoffee = {
+    let newCoffee = {
         id: coffees.length,
         name: newCoffeeName,
         roast: newCoffeeRoast
     }
+
     // if (coffees.roast.toUpperCase().includes(newCoffeeRoast)) {
     //     coffees.push(newCoffee);
     // } else {
@@ -52,6 +54,7 @@ function addCoffee(e) {
     //         coffees.pop();
     //     }
     //}
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
