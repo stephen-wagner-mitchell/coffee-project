@@ -36,15 +36,18 @@ function addCoffee (e){
     e.preventDefault();
     var newCoffeeName = document.getElementById('name');
     var newCoffeeRoast = document.getElementById('add-coffee')
+
     // newCoffee.setAttribute('roast')
     // newCoffee.name = document.getElementById('name').value;
     // newCoffee.roast = document.getElementById('roast').value;
     // coffees.push(newCoffee);
-    var newCoffee = {
+    let newCoffee = {
         id: coffees.length,
         name: newCoffeeName,
         roast: newCoffeeRoast
     }
+    let found = {};
+    found = coffees.findIndex()
     coffees.push(newCoffee)
 }
 
