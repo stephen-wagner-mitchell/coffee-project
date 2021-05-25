@@ -18,15 +18,13 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-
-
-    // var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value;
     var selectedName = e.target.value;
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        // if (coffee.roast === selectedRoast) {
-        //     filteredCoffees.push(coffee);
-        // }
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
         if (coffee.name.toUpperCase().includes(selectedName.toUpperCase())) {
             filteredCoffees.push(coffee);
         }
@@ -34,7 +32,23 @@ function updateCoffees(e) {
     renderCoffees(filteredCoffees);
 }
 
+function addCoffee (e){
+    e.preventDefault();
+    var newCoffeeName = document.getElementById('name');
+    var newCoffeeRoast = document.getElementById('add-coffee')
+    // newCoffee.setAttribute('roast')
+    // newCoffee.name = document.getElementById('name').value;
+    // newCoffee.roast = document.getElementById('roast').value;
+    // coffees.push(newCoffee);
+    var newCoffee = {
+        id: coffees.length,
+        name: newCoffeeName,
+        roast: newCoffeeRoast
+    }
+    coffees.push(newCoffee)
+}
 
+console.log(addCoffee("test"))
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -57,9 +71,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#search-coffee-btn');
 var roastSelection = document.querySelector('#roast-selection');
+var addingCoffee = document.querySelector('#add-coffee-btn')
 
 var coffeeSearch = document.querySelector("#search-coffee");
 renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
-coffeeSearch.addEventListener("input", updateCoffees)
+coffeeSearch.addEventListener("input", updateCoffees);
+addingCoffee.addEventListener('click', addCoffee);
