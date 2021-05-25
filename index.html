@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Coffee!</h1>
-    <div class="container" id="coffees">
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Coffee!</h1>
+        <div class="container" id="coffees">
+        </div>
+        <div>
+            <form>
+                <label for="roast-selection">Roast</label>
+                <select id="roast-selection">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="search-coffee">Search</label>
+                <input type="text" id="search-coffee" class="“search“">
+                <input id="search-coffee-btn" type="submit"/>
+            </form>
+            <hr>
+            <h2>Add Coffee</h2>
+            <form>
+                <label for="add-coffee">Roast</label>
+                <select id="add-coffee">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="name">Add Name</label>
+                <input id="name" type="text" class="“search”/">
 
-    <form>
-        <label for="roast-selection1"></label>
-        <p>Roast</p>
-        <select id="roast-selection1">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-    </form>
-    <form class="search">
-        <label>
-            <p>Coffee Name</p>
-            <input class="“search”" name="“text”" placeholder="“Search“" type="text">
-        </label>
-        <input id="submit1" type="submit"/>
-    </form>
-    <hr>
-    <h2>Add Coffee</h2>
-    <form>
-        <label for="roast-selection2"></label>
-        <p>Roast</p>
-        <select id="roast-selection2">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-    </form>
-    <form class="search">
-        <label>
-            <p>Name</p>
-            <input type=“text” name=“text” class=“search” onkeyup="updateCoffees()">
-        </label>
-        <input id="submit2" type="submit"/>
-    </form>
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+                <input id="add-coffee-btn" type="submit"/>
+            </form>
+        </div>
 
-    <script src="main.js"></script>
-</body>
+        <script src="main.js"></script>
+    </body>
 </html>
