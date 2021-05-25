@@ -32,23 +32,27 @@ function updateCoffees(e) {
     renderCoffees(filteredCoffees);
 }
 
-function addCoffee (e){
+function addCoffee(e) {
     e.preventDefault();
-    var newCoffeeName = document.getElementById('name');
-    var newCoffeeRoast = document.getElementById('add-coffee')
+    let newCoffeeRoast = roastSelection.value;
+    let newCoffeeName = e.target.value;
+    // let emptyNewCoffee = {};
     // newCoffee.setAttribute('roast')
-    // newCoffee.name = document.getElementById('name').value;
-    // newCoffee.roast = document.getElementById('roast').value;
     // coffees.push(newCoffee);
     var newCoffee = {
         id: coffees.length,
         name: newCoffeeName,
         roast: newCoffeeRoast
     }
-    coffees.push(newCoffee)
+    // if (coffees.roast.toUpperCase().includes(newCoffeeRoast)) {
+    //     coffees.push(newCoffee);
+    // } else {
+    //     (coffees.name.toUpperCase().includes(newCoffeeRoast.toUpperCase()))
+    //     {
+    //         coffees.pop();
+    //     }
+    //}
 }
-
-console.log(addCoffee("test"))
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
