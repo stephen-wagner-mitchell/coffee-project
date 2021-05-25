@@ -11,7 +11,6 @@ function buildCoffee(coffee) {
 
 function renderCoffees(coffees) {
     for (var i = coffees.length - 1; i >= 0; i--) {
-        console.log(tbody)
         tbody.appendChild(buildCoffee(coffees[i]));
     }
 }
@@ -23,9 +22,11 @@ function updateCoffees(e) {
     coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+            console.log(coffee)
         }
     });
     renderCoffees(filteredCoffees);
+    console.log(filteredCoffees)
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
