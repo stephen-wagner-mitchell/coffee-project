@@ -2,8 +2,7 @@
 
 function buildCoffee(coffee) {
     let coffeeDiv = document.createElement('div')
-    coffeeDiv.setAttribute("class", "coffee-div")
-    coffeeDiv.setAttribute("class", "col-xs-12")
+    coffeeDiv.setAttribute("class", "coffee-div col-2")
     coffeeDiv.innerHTML =
         `<div> ${coffee.id} </div>
             <div> ${coffee.name} </div>
@@ -34,29 +33,34 @@ function updateCoffees(e) {
     renderCoffees(filteredCoffees);
 }
 
+
 function addCoffee(e) {
     e.preventDefault();
-
-    let newCoffeeRoast = roastSelection.value;
-    let newCoffeeName = e.target.value;
+    let isInArray = false;
+    let newCoffeeRoast = document.getElementById("add-coffee").value;
+    let newCoffeeName = document.getElementById("name").value;
+    console.log(newCoffeeRoast);
+    console.log(newCoffeeName);
     // let emptyNewCoffee = {};
     // newCoffee.setAttribute('roast')
     // coffees.push(newCoffee);
     let newCoffee = {
-        id: coffees.length,
+        id: coffees.length+1,
         name: newCoffeeName,
         roast: newCoffeeRoast
     }
-
-    // if (coffees.roast.toUpperCase().includes(newCoffeeRoast)) {
-    //     coffees.push(newCoffee);
-    // } else {
-    //     (coffees.name.toUpperCase().includes(newCoffeeRoast.toUpperCase()))
-    //     {
-    //         coffees.pop();
-    //     }
-    //}
-
+    coffees.forEach((coffee) => {
+//TODO: method to compare/add coffees
+        if (coffee.name.toUpperCase() === newCoffee.name.toUpperCase()) {
+            isInArray = true
+        }
+    })
+    if (!isInArray){
+        coffees.push(newCoffee)
+        renderCoffees(coffees)
+    }else{
+        alert(`We already have ${newCoffeeName}!`);
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
