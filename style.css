@@ -1,4 +1,6 @@
-@media screen and (min-width: 365px) {
+@media screen and (min-width: 576px) {
+
+
     h1 {
         font-family: 'Amatic SC', cursive;
         font-size: 3em;
@@ -24,6 +26,7 @@
         width: 100%;
         margin: 0;
     }
+
     .coffee-div {
         margin: 1em;
         font-family: 'Amatic SC', cursive;
@@ -31,17 +34,19 @@
         font-size: 1.5em;
 
     }
+    canvas{
+        display: none;
+    }
 
 
-.snakeGame{
-    display: none;
-}
+
 
 }
 
 @media screen and (min-width: 1200px) {
-    body{
+    body {
         background-color: peachpuff;
     }
+
 
 }
