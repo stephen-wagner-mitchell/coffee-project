@@ -41,9 +41,6 @@ function addCoffee(e) {
     let newCoffeeName = document.getElementById("name").value;
     console.log(newCoffeeRoast);
     console.log(newCoffeeName);
-    // let emptyNewCoffee = {};
-    // newCoffee.setAttribute('roast')
-    // coffees.push(newCoffee);
     let newCoffee = {
         id: coffees.length+1,
         name: newCoffeeName,
