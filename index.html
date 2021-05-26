@@ -16,9 +16,9 @@
                  alt="header-logo"></h1>
         <hr>
         <div class="container row d-flex justify-content-center" id="coffees"></div>
-        <form class="row">
-            <div class="">
-                <label class="movingForms d-flex justify-content-center" for="roast-selection">Roast</label>
+        <form class="">
+            <div class="moving d-flex justify-content-center">
+                <label for="roast-selection">Roast</label>
                 <select id="roast-selection">
                     <option>all</option>
                     <option>light</option>
@@ -27,13 +27,14 @@
                 </select>
                 <label for="search-coffee">Search</label>
                 <input type="text" id="search-coffee" class="search">
-                <div>
-                    <input class="btn btn-primary btn-lg btn-block" id="search-coffee-btn" type="submit"/>
+            </div>
+                <div class="btn-primary btn-lg btn-block">
+                    <input class="btn text-white  " id="search-coffee-btn" type="submit"/>
                 </div>
         </form>
         <hr>
-        <h2 class="moving d-flex justify-content-center">Add a Coffee</h2>
-        <form>
+        <h2 class="d-flex justify-content-center mb-4">Add a Coffee</h2>
+        <form class="moving d-flex justify-content-center">
             <label for="add-coffee">Roast</label>
             <select id="add-coffee">
                 <option>light</option>
