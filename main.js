@@ -2,6 +2,8 @@
 
 function buildCoffee(coffee) {
     let coffeeDiv = document.createElement('div')
+    coffeeDiv.setAttribute("class", "coffee-div")
+    coffeeDiv.setAttribute("class", "col-xs-12")
     coffeeDiv.innerHTML =
         `<div> ${coffee.id} </div>
             <div> ${coffee.name} </div>
