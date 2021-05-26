@@ -35,10 +35,9 @@
 
     }
 
-    canvas{
+    canvas {
         display: none;
     }
-
 
 
 }
@@ -47,7 +46,8 @@
     body {
         background-color: peachpuff;
     }
-canvas{
-    display: block;
-}
+
+    canvas {
+        display: block;
+    }
 }

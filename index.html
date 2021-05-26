@@ -16,41 +16,40 @@
                  alt="header-logo"></h1>
         <hr>
         <div class="container row d-flex justify-content-center" id="coffees"></div>
-            <form class="row">
-                <div class="col-lg-12 text-align-center contain">
-                    <label for="roast-selection">Roast</label>
-                    <select id="roast-selection">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <label for="search-coffee">Search</label>
-                    <input type="text" id="search-coffee" class="search">
-                    <div>
-                    <input class="btn btn-primary btn-lg btn-block" id="search-coffee-btn" type="submit"/>
-                </div>
-            </form>
-            <hr>
-            <h2>Add a Coffee</h2>
-            <form>
-                <label for="add-coffee">Roast</label>
-                <select id="add-coffee">
+        <form class="row">
+            <div class="">
+                <label class="movingForms d-flex justify-content-center" for="roast-selection">Roast</label>
+                <select id="roast-selection">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <label for="name">Add Name</label>
-                <input id="name" type="text" class="search"/>
+                <label for="search-coffee">Search</label>
+                <input type="text" id="search-coffee" class="search">
                 <div>
-                <input class="btn btn-primary btn-lg btn-block" id="add-coffee-btn" type="submit"/>
+                    <input class="btn btn-primary btn-lg btn-block" id="search-coffee-btn" type="submit"/>
                 </div>
-            </form>
-        </div>
+        </form>
+        <hr>
+        <h2 class="moving d-flex justify-content-center">Add a Coffee</h2>
+        <form>
+            <label for="add-coffee">Roast</label>
+            <select id="add-coffee">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="name">Add Name</label>
+            <input id="name" type="text" class="search"/>
+            <div>
+                <input class="btn btn-primary btn-lg btn-block" id="add-coffee-btn" type="submit"/>
+            </div>
+        </form>
 
         <div class="container  ">
             <div class="row"><p class="text-warning bg-danger text-center">While You Wait!</p>
-                <script class="snakeGame">
+                <script>
                     var
                         COLS = 26,
                         ROWS = 26,
