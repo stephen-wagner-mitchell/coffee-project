@@ -1,9 +1,54 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+@media screen and (min-width: 365px) {
+    h1 {
+        display: flex;
+        text-align-all: center;
+        justify-content: space-around;
+        font-family: 'Amatic SC', cursive;
+        font-size: 3em;
+    }
+
+    h2 {
+        font-family: 'Amatic SC', cursive;
+    }
+
+    hr {
+        color: black;
+    }
+
+    body {
+        background-color: #0fb784;
+    }
+
+    img {
+        width: 75px;
+    }
+
+    .container {
+        display: flex;
+        width: 75%;
+        margin: 0;
+    }
+    .coffee-div {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 1em;
+        font-family: 'Amatic SC', cursive;
+        font-weight: bold;
+        font-size: 1.5em;
+
+    }
+    #search-coffee-btn {
+        color: white;
+        text-decoration-color: white;
+        background-color: royalblue;
+        border-radius: 50%;
+    }
+    #add-coffee-btn{
+        color: white;
+        text-decoration-color: white;
+        background-color: royalblue;
+        border-radius: 50%;
+    }
+
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
