@@ -24,7 +24,7 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+            filteredCoffees.unshift(coffee);
         }
         if (coffee.name.toUpperCase().includes(selectedName.toUpperCase())) {
             filteredCoffees.push(coffee);
