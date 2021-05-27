@@ -49,7 +49,7 @@ function addCoffee(e) {
     coffees.forEach((coffee) => {
 //TODO: method to compare/add coffees
         if (coffee.name.toUpperCase() === newCoffee.name.toUpperCase()) {
-            isInArray = true
+            isInArray = true;
         }
     })
     if (!isInArray){

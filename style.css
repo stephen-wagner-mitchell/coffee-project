@@ -57,4 +57,9 @@
     .text-warning{
         display: block;
     }
+
+    .moving {
+        margin-bottom: 1em;
+    }
+
 }
